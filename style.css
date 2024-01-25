@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Raleway";
-  src: url(/assets/fonts/raleway/Raleway-VariableFont_wght.ttf) format("truetype");
+  src: url(./assets/fonts/raleway/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
   font-family: "Lato";
-  src: url(/assets/fonts/lato/Lato-Regular.ttf) format("truetype");
+  src: url(./assets/fonts/lato/Lato-Regular.ttf) format("truetype");
 }
 .bg {
   background-color: #272733;
-  background-image: url(/assets/images/bg.png);
+  background-image: url(./assets/images/bg.png);
   background-size: 100% auto;
 }
 
