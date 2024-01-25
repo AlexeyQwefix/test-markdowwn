@@ -8,3 +8,15 @@ function detectScroll() {
 }
 
 window.addEventListener("scroll", detectScroll);
+
+const mobileMenuButton = document.querySelector(".website-header__mobile-menu");
+const mobileNav = document.querySelector(".website-header__links-list");
+
+const menuToggle = () => {
+  console.log(mobileMenuButton);
+  console.log(mobileNav);
+  mobileNav.classList.toggle("website-header__links-list_opened");
+};
+
+mobileMenuButton.addEventListener("click", menuToggle);
+

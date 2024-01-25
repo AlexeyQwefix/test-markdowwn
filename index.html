@@ -12,6 +12,7 @@
       <a href="/" class="website-header__logo">
         LoremIpsum.<span class="website-header__logo__blue-part">Net</span>
       </a>
+      <button class="app-button website-header__mobile-menu">Меню</button>
       <nav class="website-header__links-list">
         <a
           href="#"
@@ -145,7 +146,7 @@
         <form class="form-section__form" action="">
           <div class="form-section__form__fields">
             <label class="app-select">
-              <select placeholder="hi" class="app-select__select">
+              <select name="select" placeholder="hi" class="app-select__select">
                 <option value="" disabled hidden selected>
                   Выберите тип системы
                 </option>
@@ -170,6 +171,7 @@
               </svg>
             </label>
             <input
+              name="email"
               class="app-text-input"
               type="email"
               id="email"
@@ -177,6 +179,7 @@
               autocomplete="email"
             />
             <input
+              name="name"
               class="app-text-input"
               autocomplete="given-name"
               type="given-name"
@@ -194,6 +197,7 @@
                 ></div>
               </div>
               <input
+                name="someRange"
                 class="app-range-input__input"
                 value="75"
                 id="percents_input"
@@ -204,7 +208,6 @@
               />
               <script defer>
                 const value = document.querySelector("#percents_output");
-                console.warn(value);
                 const input = document.querySelector("#percents_input");
                 value.textContent = input.value + " %";
                 input.addEventListener("input", (event) => {
@@ -226,8 +229,28 @@
                   fill="currentColor"
                 />
               </svg>
-              <span class="app-file-input__text">Прикрепить файл</span>
-              <input class="app-file-input__input" id="file" type="file" />
+              <span
+                name="file"
+                id="file-input-text"
+                class="app-file-input__text"
+                >Прикрепить файл</span
+              >
+              <input
+                single
+                class="app-file-input__input"
+                id="file-input"
+                type="file"
+              />
+              <script defer>
+                const fileInputText =
+                  document.querySelector("#file-input-text");
+                const fileInput = document.querySelector("#file-input");
+                fileInput.addEventListener("change", (event) => {
+                  if (fileInput.files.length) {
+                    fileInputText.textContent = fileInput.files[0].name;
+                  }
+                });
+              </script>
             </label>
           </div>
           <button class="form-section__form__submit app-button">
@@ -236,5 +259,67 @@
         </form>
       </section>
     </div>
+    <footer class="website-footer">
+      <div class="website-footer__copyright">
+        © 2018 «LoremIpsum.net» Все права защищены.
+      </div>
+      <div class="website-footer__divider"></div>
+      <a href="https://qiwi.com/" class="website-footer__link" target="_blank">
+        <img
+          class="website-footer__link__icon"
+          src="/assets/images/socials/qiwi.svg"
+          alt="Qiwi wallet"
+        />
+        QIWI wallet
+      </a>
+      <a
+        href="https://yoomoney.ru/"
+        class="website-footer__link"
+        target="_blank"
+      >
+        <img
+          class="website-footer__link__icon"
+          src="/assets/images/socials/yandex-money.svg"
+          alt="Yandex Money"
+        />
+        Yandex Money
+      </a>
+      <a
+        href="https://www.webmoney.ru/"
+        class="website-footer__link"
+        target="_blank"
+      >
+        <img
+          class="website-footer__link__icon"
+          src="/assets/images/socials/web-money.svg"
+          alt="Web Money"
+        />
+        Web Money
+      </a>
+      <div class="website-footer__divider"></div>
+      <a
+        href="mailto:info@ipsum228.com"
+        class="website-footer__link website-footer__link_social"
+      >
+        <img
+          class="website-footer__link__icon"
+          src="/assets/images/socials/email.svg"
+          alt="Web Money"
+        />
+        info@ipsum228.com
+      </a>
+      <a
+        href="https://vk.com/"
+        class="website-footer__link website-footer__link_social"
+        target="_blank"
+      >
+        <img
+          class="website-footer__link__icon"
+          src="/assets/images/socials/vk.svg"
+          alt="Web Money"
+        />
+        Мы вконтакте
+      </a>
+    </footer>
   </body>
 </html>
