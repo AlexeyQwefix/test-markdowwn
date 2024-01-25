@@ -6,6 +6,10 @@
     <title>LoremIpsum.Net</title>
     <link href="/style.css" rel="stylesheet" />
     <script src="/header-animation.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="website-header website-header_on-top">
@@ -259,6 +263,68 @@
         </form>
       </section>
     </div>
+    <section class="feedback-section">
+      <div class="swiper feedback-section__mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide feedback-section__mySwiper__swiper-slide">
+            <div class="headers">
+              <h2 class="headers__header">
+                Отзыв о нашей
+                <span class="headers__header__blue-part">работе</span>
+              </h2>
+              <h3 class="headers__sub-header">Спасибо за сотрудничество</h3>
+            </div>
+            <p class="feedback-section__mySwiper__swiper-slide__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+              accusantium doloribus reprehenderit corporis, quis at,
+              necessitatibus veritatis maiores mollitia molestiae soluta dolores
+              quos? Molestiae, fuga, rerum sed maiores iure ullam enim quam
+              natus illo quia quas impedit sapiente perspiciatis dignissimos?
+              Deserunt quia ea sed laborum ratione excepturi recusandae, dolorum
+              animi.
+            </p>
+          </div>
+          <div class="swiper-slide feedback-section__mySwiper__swiper-slide">
+            <div class="headers">
+              <h2 class="headers__header">
+                Отзыв о нашей
+                <span class="headers__header__blue-part">работе</span>
+              </h2>
+              <h3 class="headers__sub-header">Спасибо за сотрудничество</h3>
+            </div>
+            <p class="feedback-section__mySwiper__swiper-slide__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+              nostrum asperiores aut optio facilis ad, distinctio explicabo
+              mollitia est accusamus ipsam hic expedita, voluptates id obcaecati
+              delectus amet repellat veritatis aperiam placeat voluptas in!
+              Eius, magni! Mollitia veniam perspiciatis odio impedit eligendi
+              nostrum cumque alias placeat numquam porro provident, dolor quo
+              natus modi? Nam, non nobis. Quas aliquam consequuntur rem omnis
+              debitis odit, sed corrupti error minus architecto facilis quod
+              nihil labore ullam adipisci eveniet modi suscipit officiis
+              blanditiis accusamus ducimus! Animi, modi blanditiis architecto
+              delectus maiores ab et aliquid adipisci ex, sed perferendis magni
+              laudantium a impedit! Perferendis, magni.
+            </p>
+          </div>
+          <div class="swiper-slide feedback-section__mySwiper__swiper-slide">
+            <div class="headers">
+              <h2 class="headers__header">
+                Отзыв о нашей
+                <span class="headers__header__blue-part">работе</span>
+              </h2>
+              <h3 class="headers__sub-header">Спасибо за сотрудничество</h3>
+            </div>
+            <p class="feedback-section__mySwiper__swiper-slide__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde
+              earum odit nulla itaque numquam harum doloremque, asperiores ullam
+              officia!
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
     <footer class="website-footer">
       <div class="website-footer__copyright">
         © 2018 «LoremIpsum.net» Все права защищены.
@@ -322,4 +388,16 @@
       </a>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".feedback-section__mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+      },
+    });
+  </script>
 </html>

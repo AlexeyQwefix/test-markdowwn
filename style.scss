@@ -408,6 +408,36 @@
     }
   }
 }
+.feedback-section {
+  padding: 50px max(calc(50% - 585px), 16px) 50px;
+  background-color: #272733;
+  &__mySwiper {
+    user-select: none;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 30px !important;
+    @media (max-width: 1200px) {
+      height: 400px;
+    }
+    @media (max-width: 700px) {
+      height: 500px;
+    }
+    @media (max-width: 700px) {
+      height: 500px;
+    }
+    @media (max-width: 500px) {
+      height: unset
+    }
+    &__swiper-slide {
+      display: flex;
+      &__text {
+        color: white;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+}
 
 .app-select {
   position: relative;
